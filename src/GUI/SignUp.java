@@ -27,12 +27,14 @@ public class SignUp extends javax.swing.JFrame {
     private void initComponents() {
 
         Signup = new javax.swing.JPanel();
+        tekslogin = new javax.swing.JLabel();
+        teksaja = new javax.swing.JLabel();
         tekssignup = new javax.swing.JLabel();
         teksname = new javax.swing.JLabel();
         teksemail = new javax.swing.JLabel();
         tekspass = new javax.swing.JLabel();
         teksconpass = new javax.swing.JLabel();
-        isinama = new javax.swing.JTextField();
+        isiusername = new javax.swing.JTextField();
         isiemail = new javax.swing.JTextField();
         isipass = new javax.swing.JPasswordField();
         isiconpass = new javax.swing.JPasswordField();
@@ -44,35 +46,52 @@ public class SignUp extends javax.swing.JFrame {
         Signup.setBackground(new java.awt.Color(123, 96, 89));
         Signup.setLayout(null);
 
+        tekslogin.setFont(new java.awt.Font("Helvetica Neue", 1, 12)); // NOI18N
+        tekslogin.setForeground(new java.awt.Color(255, 248, 240));
+        tekslogin.setText("Login");
+        tekslogin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                teksloginMouseClicked(evt);
+            }
+        });
+        Signup.add(tekslogin);
+        tekslogin.setBounds(236, 610, 50, 15);
+
+        teksaja.setFont(new java.awt.Font("Helvetica Neue", 0, 11)); // NOI18N
+        teksaja.setForeground(new java.awt.Color(255, 255, 255));
+        teksaja.setText("Already Have An Account?");
+        Signup.add(teksaja);
+        teksaja.setBounds(100, 610, 140, 17);
+
         tekssignup.setFont(new java.awt.Font("Helvetica Neue", 1, 20)); // NOI18N
         tekssignup.setText("SIGN UP");
         Signup.add(tekssignup);
-        tekssignup.setBounds(60, 230, 90, 25);
+        tekssignup.setBounds(50, 230, 90, 25);
 
         teksname.setText("Name");
         Signup.add(teksname);
-        teksname.setBounds(60, 260, 34, 30);
+        teksname.setBounds(60, 260, 40, 30);
 
         teksemail.setText("Email");
         Signup.add(teksemail);
-        teksemail.setBounds(60, 330, 32, 20);
+        teksemail.setBounds(60, 329, 40, 20);
 
         tekspass.setText("Password");
         Signup.add(tekspass);
-        tekspass.setBounds(60, 390, 70, 30);
+        tekspass.setBounds(60, 388, 70, 30);
 
         teksconpass.setText("Confirm Password");
         Signup.add(teksconpass);
-        teksconpass.setBounds(60, 460, 120, 17);
+        teksconpass.setBounds(60, 459, 120, 17);
 
-        isinama.setBorder(null);
-        isinama.addActionListener(new java.awt.event.ActionListener() {
+        isiusername.setBorder(null);
+        isiusername.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                isinamaActionPerformed(evt);
+                isiusernameActionPerformed(evt);
             }
         });
-        Signup.add(isinama);
-        isinama.setBounds(70, 290, 250, 30);
+        Signup.add(isiusername);
+        isiusername.setBounds(70, 290, 250, 30);
 
         isiemail.setBorder(null);
         isiemail.addActionListener(new java.awt.event.ActionListener() {
@@ -81,7 +100,7 @@ public class SignUp extends javax.swing.JFrame {
             }
         });
         Signup.add(isiemail);
-        isiemail.setBounds(70, 360, 250, 20);
+        isiemail.setBounds(70, 355, 250, 30);
 
         isipass.setBorder(null);
         isipass.addActionListener(new java.awt.event.ActionListener() {
@@ -90,7 +109,7 @@ public class SignUp extends javax.swing.JFrame {
             }
         });
         Signup.add(isipass);
-        isipass.setBounds(70, 490, 250, 20);
+        isipass.setBounds(70, 482, 250, 30);
 
         isiconpass.setBorder(null);
         isiconpass.addActionListener(new java.awt.event.ActionListener() {
@@ -99,13 +118,18 @@ public class SignUp extends javax.swing.JFrame {
             }
         });
         Signup.add(isiconpass);
-        isiconpass.setBounds(70, 420, 250, 30);
+        isiconpass.setBounds(70, 418, 250, 30);
 
         buttonsignup.setBackground(new java.awt.Color(142, 84, 69));
         buttonsignup.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         buttonsignup.setForeground(new java.awt.Color(255, 255, 255));
         buttonsignup.setText("Sign Up");
         buttonsignup.setBorder(null);
+        buttonsignup.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                buttonsignupMouseClicked(evt);
+            }
+        });
         buttonsignup.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonsignupActionPerformed(evt);
@@ -122,13 +146,11 @@ public class SignUp extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Signup, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(Signup, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(Signup, javax.swing.GroupLayout.PREFERRED_SIZE, 663, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(Signup, javax.swing.GroupLayout.DEFAULT_SIZE, 675, Short.MAX_VALUE)
         );
 
         pack();
@@ -146,13 +168,24 @@ public class SignUp extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_buttonsignupActionPerformed
 
-    private void isinamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_isinamaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_isinamaActionPerformed
-
     private void isipassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_isipassActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_isipassActionPerformed
+
+    private void buttonsignupMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonsignupMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonsignupMouseClicked
+
+    private void teksloginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_teksloginMouseClicked
+        this.dispose();
+        
+        Login loginpage = new Login();
+        loginpage.setVisible(true);
+    }//GEN-LAST:event_teksloginMouseClicked
+
+    private void isiusernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_isiusernameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_isiusernameActionPerformed
 
     /**
      * @param args the command line arguments
@@ -196,10 +229,12 @@ public class SignUp extends javax.swing.JFrame {
     private javax.swing.JLabel desainsignup;
     private javax.swing.JPasswordField isiconpass;
     private javax.swing.JTextField isiemail;
-    private javax.swing.JTextField isinama;
     private javax.swing.JPasswordField isipass;
+    private javax.swing.JTextField isiusername;
+    private javax.swing.JLabel teksaja;
     private javax.swing.JLabel teksconpass;
     private javax.swing.JLabel teksemail;
+    private javax.swing.JLabel tekslogin;
     private javax.swing.JLabel teksname;
     private javax.swing.JLabel tekspass;
     private javax.swing.JLabel tekssignup;

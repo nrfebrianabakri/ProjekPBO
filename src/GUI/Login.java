@@ -16,6 +16,9 @@ public class Login extends javax.swing.JFrame {
     public Login() {
         initComponents();
     }
+    
+   
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -27,13 +30,15 @@ public class Login extends javax.swing.JFrame {
     private void initComponents() {
 
         Login = new javax.swing.JPanel();
-        isiusername = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        isiUsername = new javax.swing.JTextField();
+        isiEmail = new javax.swing.JTextField();
         tekslogin = new javax.swing.JLabel();
         teksusername = new javax.swing.JLabel();
         teksemail = new javax.swing.JLabel();
-        buttonlogin = new javax.swing.JButton();
-        isiemaillog = new javax.swing.JPasswordField();
         desainlogin = new javax.swing.JLabel();
+        teksaja = new javax.swing.JLabel();
+        tekssignup = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 248, 240));
@@ -41,14 +46,26 @@ public class Login extends javax.swing.JFrame {
         Login.setBackground(new java.awt.Color(123, 96, 89));
         Login.setLayout(null);
 
-        isiusername.setBorder(null);
-        isiusername.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setBackground(new java.awt.Color(142, 84, 69));
+        jButton1.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Login");
+        jButton1.setBorder(null);
+        Login.add(jButton1);
+        jButton1.setBounds(150, 470, 90, 30);
+
+        isiUsername.setBorder(null);
+        Login.add(isiUsername);
+        isiUsername.setBounds(80, 347, 240, 30);
+
+        isiEmail.setBorder(null);
+        isiEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                isiusernameActionPerformed(evt);
+                isiEmailActionPerformed(evt);
             }
         });
-        Login.add(isiusername);
-        isiusername.setBounds(70, 345, 260, 36);
+        Login.add(isiEmail);
+        isiEmail.setBounds(80, 417, 240, 30);
 
         tekslogin.setFont(new java.awt.Font("Helvetica Neue", 1, 20)); // NOI18N
         tekslogin.setText("LOGIN");
@@ -57,38 +74,33 @@ public class Login extends javax.swing.JFrame {
 
         teksusername.setText("Username");
         Login.add(teksusername);
-        teksusername.setBounds(60, 320, 59, 20);
+        teksusername.setBounds(60, 320, 70, 20);
 
         teksemail.setText("Email");
         Login.add(teksemail);
         teksemail.setBounds(60, 390, 50, 20);
 
-        buttonlogin.setBackground(new java.awt.Color(142, 84, 69));
-        buttonlogin.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        buttonlogin.setForeground(new java.awt.Color(255, 255, 255));
-        buttonlogin.setText("Login");
-        buttonlogin.setBorder(null);
-        buttonlogin.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                buttonloginMouseClicked(evt);
-            }
-        });
-        buttonlogin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonloginActionPerformed(evt);
-            }
-        });
-        Login.add(buttonlogin);
-        buttonlogin.setBounds(140, 480, 110, 30);
-
-        isiemaillog.setBorder(null);
-        Login.add(isiemaillog);
-        isiemaillog.setBounds(70, 415, 260, 36);
-
         desainlogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/untuklogin.png"))); // NOI18N
         desainlogin.setText("jLabel2");
         Login.add(desainlogin);
         desainlogin.setBounds(0, -3, 400, 540);
+
+        teksaja.setFont(new java.awt.Font("Helvetica Neue", 0, 11)); // NOI18N
+        teksaja.setForeground(new java.awt.Color(255, 255, 255));
+        teksaja.setText("Don't Have An Account?");
+        Login.add(teksaja);
+        teksaja.setBounds(100, 560, 120, 17);
+
+        tekssignup.setFont(new java.awt.Font("Helvetica Neue", 1, 12)); // NOI18N
+        tekssignup.setForeground(new java.awt.Color(255, 248, 240));
+        tekssignup.setText("Sign Up");
+        tekssignup.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tekssignupMouseClicked(evt);
+            }
+        });
+        Login.add(tekssignup);
+        tekssignup.setBounds(225, 560, 60, 17);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -106,17 +118,15 @@ public class Login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void buttonloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonloginActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_buttonloginActionPerformed
+    private void tekssignupMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tekssignupMouseClicked
+        this.dispose();       
+        SignUp signuppage = new SignUp();
+        signuppage.setVisible(true);
+    }//GEN-LAST:event_tekssignupMouseClicked
 
-    private void isiusernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_isiusernameActionPerformed
+    private void isiEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_isiEmailActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_isiusernameActionPerformed
-
-    private void buttonloginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonloginMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_buttonloginMouseClicked
+    }//GEN-LAST:event_isiEmailActionPerformed
 
     /**
      * @param args the command line arguments
@@ -148,19 +158,27 @@ public class Login extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Login().setVisible(true);
+                new LogiteksajaVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Login;
-    private javax.swing.JButton buttonlogin;
     private javax.swing.JLabel desainlogin;
-    private javax.swing.JPasswordField isiemaillog;
-    private javax.swing.JTextField isiusername;
+    private javax.swing.JTextField isiEmail;
+    private javax.swing.JTextField isiUsername;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel teksaja;
     private javax.swing.JLabel teksemail;
     private javax.swing.JLabel tekslogin;
+    private javax.swing.JLabel tekssignup;
     private javax.swing.JLabel teksusername;
     // End of variables declaration//GEN-END:variables
+
+    private static class LogiteksajaVisible {
+
+        public LogiteksajaVisible(boolean b) {
+        }
+    }
 }

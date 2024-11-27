@@ -65,7 +65,7 @@ public class EDIT extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Cambria", 1, 20)); // NOI18N
         jLabel2.setText("Edit Profile");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, 110, 30));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, 140, 30));
 
         jTextField2.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
         jTextField2.setForeground(new java.awt.Color(102, 102, 102));

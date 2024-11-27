@@ -8,12 +8,12 @@ package GUI;
  *
  * @author nurfebrianabakri
  */
-public class Welcome extends javax.swing.JFrame {
+public class Welcomee extends javax.swing.JFrame {
 
     /**
-     * Creates new form Welcome
+     * Creates new form Welcomee
      */
-    public Welcome() {
+    public Welcomee() {
         initComponents();
     }
 
@@ -26,41 +26,40 @@ public class Welcome extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
-        Welcome = new javax.swing.JPanel();
-        desainwelcome = new javax.swing.JLabel();
-
-        jCheckBoxMenuItem1.setSelected(true);
-        jCheckBoxMenuItem1.setText("jCheckBoxMenuItem1");
+        jPanel1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        Welcome.setBackground(new java.awt.Color(255, 248, 240));
+        jPanel1.setBackground(new java.awt.Color(255, 248, 240));
+        jPanel1.setLayout(null);
 
-        desainwelcome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/untukselamatdtg.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/untukwelcomee 1.png"))); // NOI18N
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(45, 149, 308, 221);
 
-        javax.swing.GroupLayout WelcomeLayout = new javax.swing.GroupLayout(Welcome);
-        Welcome.setLayout(WelcomeLayout);
-        WelcomeLayout.setHorizontalGroup(
-            WelcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(desainwelcome)
-        );
-        WelcomeLayout.setVerticalGroup(
-            WelcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(WelcomeLayout.createSequentialGroup()
-                .addComponent(desainwelcome)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        jLabel1.setFont(new java.awt.Font("ITF Devanagari", 0, 24)); // NOI18N
+        jLabel1.setText("Welcome");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(150, 380, 96, 37);
+
+        jLabel3.setFont(new java.awt.Font("ITF Devanagari", 0, 28)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(148, 60, 2));
+        jLabel3.setText("Selamat Datang");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(110, 410, 200, 43);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Welcome, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Welcome, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 663, Short.MAX_VALUE)
         );
 
         pack();
@@ -83,27 +82,28 @@ public class Welcome extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Welcome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Welcomee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Welcome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Welcomee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Welcome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Welcomee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Welcome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Welcomee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Welcome().setVisible(true);
+                new Welcomee().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel Welcome;
-    private javax.swing.JLabel desainwelcome;
-    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

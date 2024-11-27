@@ -15,10 +15,10 @@ public class AplikasiProjek {
      */
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            Welcome welcome = new Welcome();
+            Welcomee welcome = new Welcomee();
             welcome.setVisible(true);
 
-            Timer timer = new Timer(2000, e -> {
+            Timer timer = new Timer(3000, e -> {
                 welcome.dispose(); // Menutup halaman welcome
                 Login login = new Login(); // Membuka halaman login
                 login.setVisible(true);
